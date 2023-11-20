@@ -1,0 +1,32 @@
+import random
+import string
+
+def password_generator():
+    letters = string.ascii_letters
+    nums = string.digits
+    special = string.punctuation
+    
+    characters = letters + nums + special
+    
+    pwd_length = int(input("Enter a password length: "))
+    pwd = ""
+    
+    for i in range(pwd_length):
+        pwd += random.choice(characters)
+        
+    return pwd
+
+print(password_generator())
+
+def create_emoji():
+    emoji = ["\U0001f600", "\U0001f642", "\U0001F606", "\U0001F923"]
+    return random.choice(emoji)
+
+def coinflip():
+    coin = random.randrange(0,2)
+    if coin == 0:
+        print("yazı")
+    else:
+        print("tura")
+        
+        
